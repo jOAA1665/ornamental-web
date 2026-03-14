@@ -9,7 +9,29 @@
 <title>Ornamental | Retapizados</title>
 
 <style>
+.galeria{
+padding:60px 20px;
+text-align:center;
+}
 
+.contenedor-galeria{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.contenedor-galeria img{
+width:300px;
+height:300px;
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+}
+
+.contenedor-galeria img:hover{
+transform:scale(1.05);
+}
 body{
 font-family:Arial;
 margin:0;
