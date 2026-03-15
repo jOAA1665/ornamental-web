@@ -9,6 +9,67 @@
 <title>Ornamental | Retapizados</title>
 
 <style>
+ .menu-btn{
+font-size:30px;
+cursor:pointer;
+}
+
+#menu{
+position:fixed;
+top:0;
+right:-260px;
+width:260px;
+height:100%;
+background:#111;
+display:flex;
+flex-direction:column;
+padding-top:60px;
+transition:0.4s;
+z-index:1001;
+}
+
+#menu a{
+color:white;
+text-decoration:none;
+padding:18px 30px;
+font-size:18px;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+#menu a:hover{
+background:#222;
+}
+
+#menu.activo{
+right:0;
+}
+
+.cerrar{
+position:absolute;
+top:20px;
+right:20px;
+font-size:26px;
+color:white;
+cursor:pointer;
+}
+
+#overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+z-index:1000;
+}
+
+#overlay.activo{
+opacity:1;
+pointer-events:auto;
+}
  display:flex;
 align-items:center;
 justify-content:space-between;
@@ -314,7 +375,7 @@ text-align:center;
 <header>
 
 <div class="marca">
-<img src="logo.png" class="logo">
+<img src="circulo logo-Photoroom" class="logo">
 <span class="titulo">Ornamental</span>
 </div>
 
@@ -322,12 +383,16 @@ text-align:center;
 ☰
 </div>
 
+<div id="overlay" onclick="toggleMenu()"></div>
+
 <nav id="menu">
 
-<a href="#inicio">Inicio</a>
-<a href="#trabajos">Trabajos</a>
-<a href="#proceso">Proceso</a>
-<a href="#instagram">Instagram</a>
+<div class="cerrar" onclick="toggleMenu()">✕</div>
+
+<a href="#inicio" onclick="toggleMenu()">Inicio</a>
+<a href="#trabajos" onclick="toggleMenu()">Trabajos</a>
+<a href="#proceso" onclick="toggleMenu()">Proceso</a>
+<a href="#instagram" onclick="toggleMenu()">Instagram</a>
 
 </nav>
 
@@ -450,10 +515,16 @@ Ver más trabajos
 </a>
 
 </section>
- <script>
+<script>
+
 function toggleMenu(){
+
 document.getElementById("menu").classList.toggle("activo");
+
+document.getElementById("overlay").classList.toggle("activo");
+
 }
+
 </script>
 </body>
 </html>
