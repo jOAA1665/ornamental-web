@@ -2,14 +2,52 @@
 <html lang="es">
 
 <head>
- <link rel="icon" href="circulo logo-Photoroom.png">
+<link rel="icon" href="circulo logo-Photoroom.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Ornamental | Retapizados</title>
-
 <style>
+
+ .section{
+padding:80px 20px;
+}
+
+ .whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:30px;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:all 0.3s ease;
+animation:flotar 2s infinite;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+@keyframes flotar{
+0%{transform:translateY(0);}
+50%{transform:translateY(-5px);}
+100%{transform:translateY(0);}
+}
+
+ .antes-despues{
+background:white;
+padding:40px 20px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+max-width:900px;
+margin:0 auto;
+}
 
  section{
 margin-top:80px;
@@ -117,15 +155,16 @@ margin-top:30px;
 .tipos div{
 background:white;
 padding:15px 25px;
-border-radius:8px;
-box-shadow:0 3px 8px rgba(0,0,0,0.1);
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:all 0.3s ease;
 cursor:pointer;
+font-weight:500;
 }
 
 .tipos div:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+transform:translateY(-6px) scale(1.03);
+box-shadow:0 12px 25px rgba(0,0,0,0.2);
 }
 
  .galeria{
@@ -439,9 +478,9 @@ transition:0.3s;
 transform:scale(1.05);
 }
 body{
-font-family:Arial;
+font-family:'Poppins', sans-serif;
 margin:0;
-background:#D8CFBA;
+background:linear-gradient(to bottom, #eae2d6, #f5efe6);
 color:#0B4A2F;
 }
 
