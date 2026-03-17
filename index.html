@@ -1,851 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-<link rel="icon" href="circulo logo-Photoroom.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ornamental | Retapizados</title>
 
+<link rel="icon" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Ornamental | Retapizados</title>
 <style>
-
- .section{
-padding:80px 20px;
-}
-
- .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:12px 18px;
-border-radius:30px;
-font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-transition:all 0.3s ease;
-animation:flotar 2s infinite;
-}
-
-.whatsapp:hover{
-transform:scale(1.1);
-}
-
-@keyframes flotar{
-0%{transform:translateY(0);}
-50%{transform:translateY(-5px);}
-100%{transform:translateY(0);}
-}
-
- .antes-despues{
-background:white;
-padding:40px 20px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-max-width:900px;
-margin:0 auto;
-}
-
- section{
-margin-top:80px;
-}
-
- .section h2{
-font-size:32px;
-font-weight:bold;
-margin-bottom:30px;
-position:relative;
-}
-
-.section h2::after{
-content:"";
-display:block;
-width:60px;
-height:3px;
-background:#1f5c3a;
-margin:10px auto;
-border-radius:2px;
-}
-
- .opinion{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
-max-width:250px;
-margin:10px;
-transition:all 0.3s ease;
-}
-
-.opinion:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-
- .imagen img{
-transition:all 0.3s ease;
-}
-
-.imagen img:hover{
-transform:scale(1.05);
-}
-
- .imagen img{
-transition:0.3s;
-}
-
-.imagen img:hover{
-transform:scale(1.05);
-}
-
- h2{
-font-size:32px;
-font-weight:bold;
-margin-bottom:20px;
-}
- 
- section{
-margin-top:80px;
-}
-
- .comparacion{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.imagen{
-text-align:center;
-}
-
-.imagen img{
-width:350px;
-border-radius:8px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
- .reviews{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.reviews div{
-background:white;
-padding:20px;
-width:250px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.tipos{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.tipos div{
-background:white;
-padding:15px 25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:all 0.3s ease;
-cursor:pointer;
-font-weight:500;
-}
-
-.tipos div:hover{
-transform:translateY(-6px) scale(1.03);
-box-shadow:0 12px 25px rgba(0,0,0,0.2);
-}
-
- .galeria{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-margin-top:30px;
-}
-
-.galeria img{
-width:100%;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
-}
-
- h2{
-font-size:32px;
-font-weight:700;
-color:#0B4A2F;
-margin-bottom:30px;
-}
-
-h2{
-font-size:32px;
-font-weight:bold;
-color:#0B4A2F;
-margin-bottom:30px;
-}
-
-h3{
-font-size:20px;
-font-weight:bold;
-color:#0B4A2F;
-}
- 
-h2{
-font-size:32px;
-font-weight:bold;
-color:#0B4A2F;
-margin-bottom:30px;
-position:relative;
-}
-
-h2::after{
-content:"";
-display:block;
-width:60px;
-height:3px;
-background:#0B4A2F;
-margin:10px auto 0;
-}
-
- .comparacion p{
-font-weight:bold;
-font-size:18px;
-color:#0B4A2F;
-}
- .boton{
-display:inline-block;
-background:#0B4A2F;
-color:white;
-padding:14px 26px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.boton:hover{
-background:#146B45;
-}
- .menu-btn{
-font-size:30px;
-cursor:pointer;
-}
-
-#menu{
-position:fixed;
-top:0;
-right:-260px;
-width:260px;
-height:100%;
-background:#0B4A2F;
-display:flex;
-flex-direction:column;
-padding-top:60px;
-transition:0.4s;
-z-index:1001;
-}
-
-#menu a{
-color:white;
-text-decoration:none;
-padding:18px 30px;
-font-size:18px;
-border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-#menu a:hover{
-background:#146B45;
-}
-
-#menu.activo{
-right:0;
-}
-
-.cerrar{
-position:absolute;
-top:20px;
-right:20px;
-font-size:26px;
-color:white;
-cursor:pointer;
-}
-
-#overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-opacity:0;
-pointer-events:none;
-transition:0.3s;
-z-index:1000;
-}
-
-#overlay.activo{
-opacity:1;
-pointer-events:auto;
-}
- display:flex;
-align-items:center;
-justify-content:space-between;
-padding:15px 30px;
-}
- .menu-btn{
-font-size:30px;
-cursor:pointer;
-}
-
-#menu{
-position:fixed;
-top:0;
-right:-250px;
-width:250px;
-height:100%;
-background:#111;
-display:flex;
-flex-direction:column;
-padding-top:80px;
-transition:0.3s;
-}
-
-#menu a{
-color:white;
-text-decoration:none;
-padding:15px 30px;
-font-size:18px;
-}
-
-#menu a:hover{
-background:#333;
-}
-
-#menu.activo{
-right:0;
-}
-
-.marca{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.logo{
-height:60px;
-width:auto;
-margin-right:10px;
-vertical-align:middle;
-}
-
-.titulo{
-font-size:28px;
-font-weight:bold;
-line-height:1;
-}
-
-
-.antes-despues{
-padding:60px 20px;
-text-align:center;
-width:100%;
-display:block;
-}
-
-.comparacion{
-display:flex;
-flex-direction:row;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
- .comparacion div{
-width:300px;
-}
-
-.imagen{
-width:320px;
-}
-
-.imagen img{
-width:100%;
-border-radius:10px;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
-
-.imagen p{
-margin-top:10px;
-font-weight:bold;
-}
-.instagram{
-padding:80px 20px;
-text-align:center;
-background:#111;
-color:white;
-}
-
-.instagram h2{
-font-size:32px;
-margin-bottom:20px;
-}
-
-.instagram a{
-display:inline-block;
-margin-top:20px;
-padding:14px 26px;
-background:#E1306C;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-transition:0.3s;
-}
-
-.instagram a:hover{
-transform:scale(1.05);
-}
-
-  .proceso{
-padding:80px 20px;
-text-align:center;
-background:linear-gradient(180deg,#ffffff,#f3f3f3);
-}
-
-.proceso h2{
-font-size:32px;
-margin-bottom:40px;
-}
-
-.pasos{
-display:flex;
-flex-direction:row;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-margin-top:40px;
-}
- 
-.pasos div{
-background:white;
-padding:20px;
-border-radius:10px;
-width:220px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-.pasos div:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-.pasos h3{
-margin-bottom:10px;
-}
-.galeria{
-padding:60px 20px;
-text-align:center;
-}
-
-.contenedor-galeria{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.contenedor-galeria img{
-width:300px;
-height:300px;
-object-fit:cover;
-border-radius:10px;
-transition:0.3s;
-}
-
-.contenedor-galeria img:hover{
-transform:scale(1.05);
-}
-body{
-font-family:'Poppins', sans-serif;
-margin:0;
-background:linear-gradient(to bottom, #eae2d6, #f5efe6);
-color:#0B4A2F;
-}
-
-header{
-background:#D8CFBA;
-color:#0B4A2F;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.hero{
-height:70vh;
-background-image:url("sillonpauedit.jpeg");
-background-position:center 50%;
-background-size:cover;
-background-repeat:no-repeat;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-color:white;
-text-align:center;
-}
-.whatsapp-btn{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:14px 20px;
-border-radius:50px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-z-index:999;
-}
-.hero h1{
-font-size:45px;
-}
-
-button{
-background:#0B4A2F;
-color:white;
-border:none;
-padding:12px 24px;
-border-radius:6px;
-cursor:pointer;
-font-weight:bold;
-transition:0.3s;
-}
-button:hover{
-background:#146B45;
-}
-.section{
-padding:60px 20px;
-text-align:center;
-}
-
-.servicios{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-color:#0B4A2F;
-}
-
-.galeria{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.galeria img{
-width:100%;
-max-width:300px;
-height:auto;
-border-radius:10px;
-}
-}
-}
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50px;
-font-weight:bold;
-text-decoration:none;
-}
-
-footer{
-background:#1f1f1f;
-color:white;
-padding:30px;
-text-align:center;
-}
-
+body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(to bottom,#eae2d6,#f5efe6);color:#0B4A2F;}
+.container{max-width:1100px;margin:auto;padding:0 20px;}
+.section{padding:80px 0;border-bottom:1px solid rgba(0,0,0,0.05);}
+h2{font-size:28px;font-weight:600;margin-bottom:30px;}
+
+/* HEADER */
+.header{display:flex;justify-content:space-between;align-items:center;padding:20px;}
+.logo-box{display:flex;align-items:center;gap:10px;}
+.logo-box img{height:40px;}
+.menu-btn{font-size:24px;cursor:pointer;}
+
+/* MENU */
+.menu{position:fixed;top:0;right:-250px;width:250px;height:100%;background:white;box-shadow:-5px 0 20px rgba(0,0,0,0.2);padding:20px;transition:0.3s;}
+.menu.active{right:0;}
+.menu a{display:block;margin:15px 0;text-decoration:none;color:#0B4A2F;font-weight:500;}
+
+/* HERO */
+.hero{padding:100px 0;text-align:center;}
+.hero h1{font-size:40px;margin-bottom:20px;}
+.hero a{background:#0B4A2F;color:white;padding:15px 25px;border-radius:8px;text-decoration:none;font-weight:600;}
+
+/* GALERIA */
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.galeria img{width:100%;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+
+/* PASOS */
+.pasos{display:flex;gap:20px;flex-wrap:wrap;}
+.pasos div{flex:1;min-width:220px;background:white;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+
+/* ANTES DESPUES */
+.comparacion{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;}
+.imagen{text-align:center;}
+.imagen img{width:350px;border-radius:10px;box-shadow:0 8px 25px rgba(0,0,0,0.2);}
+
+/* TIPOS */
+.tipos{display:flex;gap:15px;flex-wrap:wrap;}
+.tipos div{background:white;padding:10px 20px;border-radius:8px;box-shadow:0 3px 8px rgba(0,0,0,0.1);}
+
+/* OPINIONES */
+.opiniones{display:flex;gap:20px;flex-wrap:wrap;}
+.opinion{background:white;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.15);max-width:250px;}
+
+/* FAQ */
+.faq p{margin-bottom:15px;}
+
+/* INSTAGRAM */
+.instagram{background:white;padding:30px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+
+/* WHATSAPP */
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:12px 18px;border-radius:30px;text-decoration:none;font-weight:bold;}
 </style>
-
 </head>
 
 <body>
 
-<header>
-
-<div class="marca">
-<img src="circulo logo-Photoroom.png" class="logo">
-<span class="titulo">Ornamental</span>
+<!-- HEADER -->
+<div class="header container">
+<div class="logo-box">
+<img src="logo.png">
+<h1>Ornamental</h1>
+</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 </div>
 
-<div class="menu-btn" onclick="toggleMenu()">
-☰
+<!-- MENU -->
+<div class="menu" id="menu">
+<a href="#trabajos">Trabajos</a>
+<a href="#proceso">Cómo trabajamos</a>
+<a href="#faq">Preguntas</a>
+<a href="#instagram">Instagram</a>
 </div>
 
-<div id="overlay" onclick="toggleMenu()"></div>
-
-<nav id="menu">
-
-<div class="cerrar" onclick="toggleMenu()">✕</div>
-
-<a href="#inicio" onclick="toggleMenu()">Inicio</a>
-<a href="#trabajos" onclick="toggleMenu()">Trabajos</a>
-<a href="#proceso" onclick="toggleMenu()">Proceso</a>
-<a href="#instagram" onclick="toggleMenu()">Instagram</a>
-
-</nav>
-
-</header>
-
-<section id="inicio" class="hero">
-
-<h1>Retapizado de sillones</h1>
-
-<p>Renová tus muebles con especialistas</p>
-
-<a class="boton"
-<a href="https://wa.me/541164888197?text=Hola%20quiero%20consultar%20por%20un%20retapizado" class="boton">
-Pedir presupuesto
-</a>
- 
+<!-- HERO -->
+<section class="hero container">
+<h1>Retapizados de calidad</h1>
+<p>Dejá tu sillón como nuevo</p>
+<a href="https://wa.me/TUNUMERO">Pedir presupuesto</a>
 </section>
 
- <section class="section telas">
-
-<h2>Telas disponibles</h2>
-
-<div class="tipos">
-
-<div>Chenille</div>
-<div>Pana</div>
-<div>Lino</div>
-<div>Cuero ecológico</div>
-<div>Antimanchas</div>
-
-</div>
-
-</section>
-
- <section class="section faq">
-
-<h2>Preguntas frecuentes</h2>
-
-<div class="preguntas">
-
-<p><strong>¿Cuánto tarda el trabajo?</strong><br>
-Entre 5 y 10 días según el sillón.</p>
-
-<p><strong>¿Retiran a domicilio?</strong><br>
-Sí, coordinamos retiro y entrega.</p>
-
-<p><strong>¿Se puede elegir la tela?</strong><br>
-Sí, tenemos varias opciones disponibles.</p>
-
-</div>
-
-</section>
-
- <section class="section ubicacion">
-
-<h2>Dónde trabajamos</h2>
-
-<p>Trabajamos en San miguel, Buenos Aires y alrededores.</p>
-<p>Retiro y entrega a domicilio.</p>
-
-</section>
-
- <section class="section testimonios">
-
-<h2>Opiniones de clientes</h2>
-
-<div class="reviews">
-
-<div>
-⭐⭐⭐⭐⭐
-<p>Quedó mejor que nuevo. Excelente trabajo.</p>
-<strong>María G.</strong>
-</div>
-
-<div>
-⭐⭐⭐⭐⭐
-<p>Muy prolijos y cumplieron con el tiempo.</p>
-<strong>Carlos R.</strong>
-</div>
-
-</div>
-
-</section>
-
-</section>
-
- <section class="section servicios-tipo">
-
-<h2>Qué retapizamos</h2>
-
-<div class="tipos">
-
-<div>Sillones</div>
-<div>Sillas</div>
-<div>Butacas</div>
-<div>Cabeceras de cama</div>
-<div>Bancos</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Servicios</h2>
-
-<div class="servicios">
-
-<div class="card">
-<h3>Retapizado</h3>
-<p>Renovamos completamente tus sillones</p>
-</div>
-
-<div class="card">
-<h3>Cambio de espuma</h3>
-<p>Recuperá la comodidad original</p>
-</div>
-
-<div class="card">
-<h3>Restauración</h3>
-<p>Devolvemos vida a tus muebles</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="trabajos" class="galeria">
-
+<!-- TRABAJOS -->
+<section id="trabajos" class="section">
+<div class="container">
 <h2>Trabajos realizados</h2>
-
 <div class="galeria">
-
-<img src="sillon juli 2.jpeg">
-<img src="sillonagus.jpeg">
-<img src="sillon despues.jpeg">
-<img src="sillonpauafter.jpeg">
-
+<img src="trabajo1.jpg">
+<img src="trabajo2.jpg">
+<img src="trabajo3.jpg">
+<img src="trabajo4.jpg">
+<img src="trabajo5.jpg">
+<img src="trabajo6.jpg">
 </div>
+</div>
+</section>
 
+<!-- PROCESO -->
 <section id="proceso" class="section">
-
+<div class="container">
 <h2>Cómo trabajamos</h2>
-
 <div class="pasos">
-
-<div>
-<h3>1. Enviás tu consulta</h3>
-<p>Nos mandás una foto del sillón.</p>
+<div><h3>Consulta</h3><p>Envías foto por WhatsApp</p></div>
+<div><h3>Presupuesto</h3><p>Te damos precio</p></div>
+<div><h3>Trabajo</h3><p>Retapizamos</p></div>
+<div><h3>Entrega</h3><p>Como nuevo</p></div>
 </div>
-
-<div>
-<h3>2. Te pasamos presupuesto</h3>
-<p>Evaluamos el trabajo.</p>
-</div>
-
-<div>
-<h3>3. Retapizamos</h3>
-<p>Realizamos el trabajo.</p>
-</div>
-
-<div>
-<h3>4. Entrega final</h3>
-<p>Tu sillón queda como nuevo.</p>
-</div>
-
-</div>
-
-</section>
 </div>
 </section>
 
-<section class="antes-despues">
-
+<!-- ANTES DESPUES -->
+<section class="section">
+<div class="container">
 <h2>Antes y después</h2>
-
 <div class="comparacion">
-
-<div class="imagen">
-<img src="sillon paula.jpeg">
-<p><strong>Antes</strong></p>
+<div class="imagen"><img src="antes.jpg"><p><strong>Antes</strong></p></div>
+<div class="imagen"><img src="despues.jpg"><p><strong>Después</strong></p></div>
 </div>
-
-<div class="imagen">
-<img src="sillonpauafter.jpeg">
-<p><strong>Después</strong></p>
 </div>
-
-</div>
-
-</section>
-</div>
-
 </section>
 
-</footer>
-
-<a class="whatsapp-btn"
-href="https://wa.me/5491164888197?text=Hola%20quiero%20consultar%20por%20un%20retapizado">
-WhatsApp
-</a>
-
-  <section id="instagram" class="instagram">
-
-<h2>Seguinos en Instagram</h2>
-
-<a href="https://www.instagram.com/tapiceria_ornamental/" target="_blank">
-Ver más trabajos
-</a>
-
+<!-- TELAS -->
+<section class="section">
+<div class="container">
+<h2>Telas</h2>
+<div class="tipos">
+<div>Chenille</div><div>Pana</div><div>Lino</div><div>Cuero ecológico</div><div>Antimanchas</div>
+</div>
+</div>
 </section>
+
+<!-- OPINIONES -->
+<section class="section">
+<div class="container">
+<h2>Opiniones</h2>
+<div class="opiniones">
+<div class="opinion">Excelente trabajo.</div>
+<div class="opinion">Muy recomendable.</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+<div class="container faq">
+<h2>Preguntas frecuentes</h2>
+<p><strong>¿Cuánto tarda?</strong><br>5 a 10 días.</p>
+<p><strong>¿Retiran?</strong><br>Sí, a domicilio.</p>
+</div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram" class="section">
+<div class="container">
+<h2>Instagram</h2>
+<div class="instagram">
+<p>Seguinos en Instagram para ver más trabajos</p>
+<a href="https://instagram.com/TUUSUARIO" target="_blank">Ir a Instagram</a>
+</div>
+</div>
+</section>
+
+<a href="https://wa.me/TUNUMERO" class="whatsapp">WhatsApp</a>
+
 <script>
-
 function toggleMenu(){
-
-document.getElementById("menu").classList.toggle("activo");
-
-document.getElementById("overlay").classList.toggle("activo");
-
+var menu=document.getElementById("menu");
+menu.classList.toggle("active");
 }
-
 </script>
+
 </body>
 </html>
