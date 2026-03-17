@@ -11,6 +11,41 @@
 
 <style>
 
+ .imagen img{
+transition:0.3s;
+}
+
+.imagen img:hover{
+transform:scale(1.05);
+}
+
+ h2{
+font-size:32px;
+font-weight:bold;
+margin-bottom:20px;
+}
+ 
+ section{
+margin-top:80px;
+}
+
+ .comparacion{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.imagen{
+text-align:center;
+}
+
+.imagen img{
+width:350px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
  .reviews{
 display:flex;
 justify-content:center;
@@ -40,6 +75,13 @@ background:white;
 padding:15px 25px;
 border-radius:8px;
 box-shadow:0 3px 8px rgba(0,0,0,0.1);
+transition:all 0.3s ease;
+cursor:pointer;
+}
+
+.tipos div:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
  .galeria{
@@ -584,20 +626,6 @@ Sí, tenemos varias opciones disponibles.</p>
 
 </section>
 
- <section class="section trabajos">
-<h2>Trabajos realizados</h2>
-
-<div class="galeria">
-
-<img src="trabajo1.jpg">
-<img src="trabajo2.jpg">
-<img src="trabajo3.jpg">
-<img src="trabajo4.jpg">
-<img src="trabajo5.jpg">
-<img src="trabajo6.jpg">
-
-</div>
-
 </section>
 
  <section class="section servicios-tipo">
@@ -692,14 +720,14 @@ Sí, tenemos varias opciones disponibles.</p>
 
 <div class="comparacion">
 
-<div>
-<img src="sillon paula.jpeg">
-<p>Antes</p>
+<div class="imagen">
+<img src="sillon_paula_antes.jpg">
+<p><strong>Antes</strong></p>
 </div>
 
-<div>
-<img src="sillonpauafter.jpeg">
-<p>Después</p>
+<div class="imagen">
+<img src="sillon_paula_despues.jpg">
+<p><strong>Después</strong></p>
 </div>
 
 </div>
