@@ -5,10 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ornamental | Retapizados</title>
 
-<link rel="icon" href="circulo logo-Photoroom.png">
+<link rel="icon" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+  .logo-box{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-box img{
+height:45px;
+width:auto;
+}
 body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(to bottom,#eae2d6,#f5efe6);color:#0B4A2F;}
 .container{max-width:1100px;margin:auto;padding:0 20px;}
 .section{padding:80px 0;border-bottom:1px solid rgba(0,0,0,0.05);}
@@ -78,13 +88,15 @@ justify-content:center;
 
 <!-- HEADER -->
 <div class="header container">
+
 <div class="logo-box">
-<img src="logo.png">
+<img src="logo.png" alt="Logo Ornamental">
 <h1>Ornamental</h1>
 </div>
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-</div>
 
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</div>
 <!-- MENU -->
 <div class="menu" id="menu">
 <a href="#trabajos">Trabajos</a>
