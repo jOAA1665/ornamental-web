@@ -9,6 +9,65 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
+  .whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+animation:flotar 2s infinite;
+}
+
+@keyframes flotar{
+0%{transform:translateY(0);}
+50%{transform:translateY(-5px);}
+100%{transform:translateY(0);}
+}
+
+  .section{
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+  
+  .hero{
+background:url('hero.jpg') center/cover no-repeat;
+height:80vh;
+display:flex;
+align-items:center;
+color:white;
+}
+
+.hero-content{
+max-width:600px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.btn{
+background:#0B4A2F;
+color:white;
+padding:15px 25px;
+border-radius:8px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
   .logo-box{
 display:flex;
 align-items:center;
@@ -67,8 +126,22 @@ right:0;
 .hero a{background:#0B4A2F;color:white;padding:15px 25px;border-radius:8px;text-decoration:none;font-weight:600;}
 
 /* GALERIA */
-.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.galeria img{width:100%;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.galeria{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.galeria img{
+width:100%;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+}
 
 /* PASOS */
 .pasos{display:flex;gap:20px;flex-wrap:wrap;}
@@ -120,10 +193,17 @@ right:0;
 </div>
 
 <!-- HERO -->
-<section class="hero container">
-<h1>Retapizados de calidad</h1>
-<p>Dejá tu sillón como nuevo</p>
-<a href="https://wa.me/TUNUMERO">Pedir presupuesto</a>
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>Retapizados que transforman tu sillón</h1>
+<p>Trabajos profesionales en Buenos Aires</p>
+
+<a href="https://wa.me/5491164888197" class="btn">Pedir presupuesto</a>
+
+</div>
+
 </section>
 
 <!-- TRABAJOS -->
