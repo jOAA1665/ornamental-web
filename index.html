@@ -93,13 +93,33 @@ align-items:center;
 .logo-box{display:flex;align-items:center;gap:10px;}
 .logo-box img{height:40px;}
 .menu-btn{
-font-size:32px;
-cursor:pointer;
+width:30px;
+height:25px;
 display:flex;
-align-items:center;
-justify-content:center;
-width:40px;
-height:40px;
+flex-direction:column;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.menu-btn span{
+display:block;
+height:4px;
+background:#0B4A2F;
+border-radius:2px;
+transition:0.3s;
+}
+
+/* ANIMACIÓN A X */
+.menu-btn.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.menu-btn.active span:nth-child(2){
+opacity:0;
+}
+
+.menu-btn.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
 }
 
 /* MENU */
@@ -182,8 +202,11 @@ transform:scale(1.05);
 <h1>Ornamental</h1>
 </div>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-
+<div class="menu-btn" onclick="toggleMenu()" id="menuBtn">
+<span></span>
+<span></span>
+<span></span>
+</div>
 </div>
 <!-- MENU -->
 <div class="menu" id="menu">
@@ -293,9 +316,20 @@ Paula S</div>
 
 <script>
 function toggleMenu(){
-var menu=document.getElementById("menu");
+var menu = document.getElementById("menu");
+var btn = document.getElementById("menuBtn");
+
 menu.classList.toggle("active");
+btn.classList.toggle("active");
 }
+
+// CERRAR AL TOCAR OPCIÓN
+document.querySelectorAll(".menu a").forEach(link => {
+link.addEventListener("click", () => {
+document.getElementById("menu").classList.remove("active");
+document.getElementById("menuBtn").classList.remove("active");
+});
+});
 </script>
 
 </body>
