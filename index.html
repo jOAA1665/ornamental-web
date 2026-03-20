@@ -342,22 +342,6 @@ transform:scale(1.05);
 <a href="https://wa.me/1164888197" class="whatsapp">WhatsApp</a>
 
 <script>
-function toggleMenu(){
-var menu = document.getElementById("menu");
-var btn = document.getElementById("menuBtn");
-
-menu.classList.toggle("active");
-btn.classList.toggle("active");
-}
-
-// CERRAR AL TOCAR OPCIÓN
-document.querySelectorAll(".menu a").forEach(link => {
-link.addEventListener("click", () => {
-document.getElementById("menu").classList.remove("active");
-document.getElementById("menuBtn").classList.remove("active");
-});
-});
-<script>
 let calificacion = 0;
 
 document.querySelectorAll("#estrellas span").forEach(star => {
@@ -392,6 +376,8 @@ document.getElementById("listaOpiniones").appendChild(nueva);
 // limpiar
 document.getElementById("nombre").value = "";
 document.getElementById("mensaje").value = "";
+calificacion = 0;
+document.querySelectorAll("#estrellas span").forEach(s => s.classList.remove("active"));
 }
 </script>
 
