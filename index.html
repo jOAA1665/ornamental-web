@@ -10,6 +10,23 @@
 
 <style>
 
+  .form-opinion{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:400px;
+}
+
+.estrellas span{
+font-size:25px;
+cursor:pointer;
+color:#ccc;
+}
+
+.estrellas span.active{
+color:gold;
+}
+
   .whatsapp{
 position:fixed;
 bottom:20px;
@@ -281,14 +298,24 @@ transform:scale(1.05);
 <section class="section">
 <div class="container">
 <h2>Opiniones</h2>
-<div class="opiniones">
-<div class="opinion">⭐⭐⭐⭐⭐ 
-  Excelente trabajo.
-  Laura P.</div>
-<div class="opinion">⭐⭐⭐⭐⭐ 
-  Muy recomendable. 
-Paula S</div>
+<div class="form-opinion">
+
+<input type="text" id="nombre" placeholder="Tu nombre">
+<textarea id="mensaje" placeholder="Tu opinión"></textarea>
+
+<div class="estrellas" id="estrellas">
+<span data-value="1">★</span>
+<span data-value="2">★</span>
+<span data-value="3">★</span>
+<span data-value="4">★</span>
+<span data-value="5">★</span>
 </div>
+
+<button onclick="agregarOpinion()">Enviar</button>
+
+</div>
+
+<div id="listaOpiniones" class="opiniones"></div>
 </div>
 </section>
 
@@ -330,6 +357,42 @@ document.getElementById("menu").classList.remove("active");
 document.getElementById("menuBtn").classList.remove("active");
 });
 });
+<script>
+let calificacion = 0;
+
+document.querySelectorAll("#estrellas span").forEach(star => {
+star.addEventListener("click", function(){
+calificacion = this.getAttribute("data-value");
+
+document.querySelectorAll("#estrellas span").forEach(s => s.classList.remove("active"));
+
+for(let i=0; i<calificacion; i++){
+document.querySelectorAll("#estrellas span")[i].classList.add("active");
+}
+});
+});
+
+function agregarOpinion(){
+let nombre = document.getElementById("nombre").value;
+let mensaje = document.getElementById("mensaje").value;
+
+if(nombre === "" || mensaje === "" || calificacion === 0){
+alert("Completá todo");
+return;
+}
+
+let estrellas = "★".repeat(calificacion);
+
+let nueva = document.createElement("div");
+nueva.classList.add("opinion");
+nueva.innerHTML = `<strong>${nombre}</strong><br>${estrellas}<br>${mensaje}`;
+
+document.getElementById("listaOpiniones").appendChild(nueva);
+
+// limpiar
+document.getElementById("nombre").value = "";
+document.getElementById("mensaje").value = "";
+}
 </script>
 
 </body>
