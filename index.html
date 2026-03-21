@@ -371,21 +371,49 @@ align-items:center;
 <a href="https://wa.me/1164888197" class="whatsapp">WhatsApp</a>
 
 <script>
+// MENU
+function toggleMenu(){
+var menu = document.getElementById("menu");
+var btn = document.getElementById("menuBtn");
+
+if(menu && btn){
+menu.classList.toggle("active");
+btn.classList.toggle("active");
+}
+}
+
+// ESPERAR A QUE CARGUE TODO
+document.addEventListener("DOMContentLoaded", function(){
+
+// CERRAR MENU SI EXISTE
+var links = document.querySelectorAll("#menu a");
+
+links.forEach(link => {
+link.addEventListener("click", function(){
+document.getElementById("menu").classList.remove("active");
+document.getElementById("menuBtn").classList.remove("active");
+});
+});
+
+// ESTRELLAS
 let calificacion = 0;
 
-document.querySelectorAll("#estrellas span").forEach(star => {
+var estrellas = document.querySelectorAll("#estrellas span");
+
+estrellas.forEach(star => {
 star.addEventListener("click", function(){
 calificacion = this.getAttribute("data-value");
 
-document.querySelectorAll("#estrellas span").forEach(s => s.classList.remove("active"));
+estrellas.forEach(s => s.classList.remove("active"));
 
 for(let i=0; i<calificacion; i++){
-document.querySelectorAll("#estrellas span")[i].classList.add("active");
+estrellas[i].classList.add("active");
 }
 });
 });
 
-function agregarOpinion(){
+// OPINIONES
+window.agregarOpinion = function(){
 let nombre = document.getElementById("nombre").value;
 let mensaje = document.getElementById("mensaje").value;
 
@@ -394,14 +422,22 @@ alert("Completá todo");
 return;
 }
 
-let estrellas = "★".repeat(calificacion);
+let estrellasHTML = "★".repeat(calificacion);
 
 let nueva = document.createElement("div");
 nueva.classList.add("opinion");
-nueva.innerHTML = `<strong>${nombre}</strong><br>${estrellas}<br>${mensaje}`;
+nueva.innerHTML = `<strong>${nombre}</strong><br>${estrellasHTML}<br>${mensaje}`;
 
 document.getElementById("listaOpiniones").appendChild(nueva);
 
+// limpiar
+document.getElementById("nombre").value = "";
+document.getElementById("mensaje").value = "";
+calificacion = 0;
+estrellas.forEach(s => s.classList.remove("active"));
+};
+
+});
 </script>
 
 </body>
