@@ -204,16 +204,20 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 /* ANTES DESPUES */
 .comparacion{
 display:flex;
-gap:20px;
 justify-content:center;
-align-items:flex-start;
+gap:30px;
 flex-wrap:wrap;
 }
-.imagen{text-align:center;}
+
+.imagen{
+width:300px; /* 👈 tamaño fijo */
+text-align:center;
+}
+
 .imagen img{
 width:100%;
-max-width:500px;
-height:auto;
+height:200px; /* 👈 altura fija */
+object-fit:cover; /* 👈 recorta sin deformar */
 border-radius:10px;
 box-shadow:0 8px 25px rgba(0,0,0,0.2);
 }
