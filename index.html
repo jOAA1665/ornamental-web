@@ -203,13 +203,20 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
 /* ANTES DESPUES */
 .comparacion{
-display:grid;
-grid-template-columns:1fr 1fr;
+display:flex;
 gap:20px;
-align-items:center;
+justify-content:center;
+align-items:flex-start;
+flex-wrap:wrap;
 }
 .imagen{text-align:center;}
-.imagen img{width:350px;border-radius:10px;box-shadow:0 8px 25px rgba(0,0,0,0.2);}
+.imagen img{
+width:100%;
+max-width:500px;
+height:auto;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
 
 /* TIPOS */
 .tipos{display:flex;gap:15px;flex-wrap:wrap;}
@@ -236,7 +243,7 @@ align-items:center;
 <div class="header container">
 
 <div class="logo-box">
-<img src="logo.png" alt="Logo Ornamental">
+<img src="logo.png">
 <h1>Ornamental</h1>
 </div>
 
@@ -245,12 +252,14 @@ align-items:center;
 <span></span>
 <span></span>
 </div>
-<!-- MENU -->
+
 <div class="menu" id="menu">
 <a href="#trabajos">Trabajos</a>
 <a href="#proceso">Cómo trabajamos</a>
 <a href="#faq">Preguntas</a>
 <a href="#instagram">Instagram</a>
+</div>
+
 </div>
 
 <!-- HERO -->
