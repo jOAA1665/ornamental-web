@@ -224,7 +224,6 @@ transform:scale(1.05);
 <span></span>
 <span></span>
 </div>
-</div>
 <!-- MENU -->
 <div class="menu" id="menu">
 <a href="#trabajos">Trabajos</a>
@@ -378,6 +377,14 @@ document.getElementById("nombre").value = "";
 document.getElementById("mensaje").value = "";
 calificacion = 0;
 document.querySelectorAll("#estrellas span").forEach(s => s.classList.remove("active"));
+}
+<script>
+function toggleMenu(){
+var menu = document.getElementById("menu");
+var btn = document.getElementById("menuBtn");
+
+menu.classList.toggle("active");
+btn.classList.toggle("active");
 }
 </script>
 
